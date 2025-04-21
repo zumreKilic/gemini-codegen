@@ -97,6 +97,6 @@ Bir dosyadaki satır sayısını hesaplayan Python kodunu yaz.
 
 ## 👨‍💻 Geliştirici
 
-- 👤 [zmrklc1](https://github.com/zumreKilic)
+- 👤 [zumreKilic](https://github.com/zumreKilic)
 
 ---

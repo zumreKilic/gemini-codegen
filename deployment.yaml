@@ -14,10 +14,10 @@ spec:
     spec:
       containers:
         - name: gemini-container
-          image: gemini-codegen  # ya da zmrklc1/gemini-codegen:latest
+          image: gemini-codegen  
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
           env:
             - name: GEMINI_API_KEY
-              value: "AIzaSyAUeIdQkPanWGYTbLcmzflJOTLFhwXZ9bk"
+              value: "API_KEY_ENTER_HERE"
