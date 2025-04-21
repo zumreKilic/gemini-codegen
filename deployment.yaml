@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gemini-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gemini
+  template:
+    metadata:
+      labels:
+        app: gemini
+    spec:
+      containers:
+        - name: gemini-container
+          image: gemini-codegen  # ya da zmrklc1/gemini-codegen:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
+          env:
+            - name: GEMINI_API_KEY
+              value: "AIzaSyAUeIdQkPanWGYTbLcmzflJOTLFhwXZ9bk"

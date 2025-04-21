@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>🧠 Gemini Kod Üretici</title>
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #2c2c3e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #000;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #80d8ff;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            background-color: #1e1e2f;
+            color: #e0e0e0;
+            border: 1px solid #555;
+            padding: 10px;
+            border-radius: 6px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #80d8ff;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #40c4ff;
+        }
+
+        pre {
+            background-color: #1e1e2f;
+            border: 1px solid #444;
+            padding: 20px;
+            overflow-x: auto;
+            border-radius: 8px;
+            white-space: pre-wrap;
+        }
+
+        label {
+            font-size: 1.1em;
+        }
+
+        hr {
+            margin: 30px 0;
+            border-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gemini Kod Üretici 💡</h1>
+        <form method="POST">
+            <label>Ne yapmak istiyorsun?</label><br>
+            <textarea name="prompt" required>{{ prompt }}</textarea><br>
+            <input type="submit" value="Kod Üret">
+        </form>
+
+        {% if title and code %}
+        <hr>
+        <h2>📌 Başlık</h2>
+        <p>{{ title }}</p>
+    
+        <h2>💻 Kod</h2>
+        <pre>{{ code }}</pre>
+        {% endif %}
+    </div>
+</body>
+</html>
